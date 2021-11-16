@@ -1,0 +1,37 @@
+import random
+
+
+while True:
+   user_action = input("Do you choose rock, paper or scissor?:")
+   possible_actions = ["rock", "paper", "scissor"]
+   computer_action = random.choice(possible_actions)
+
+   print(f"\nYou chose {user_action} and the computer chose {computer_action}.\n")
+
+   if user_action == computer_action:
+      print(f"\n it's a draw because you both chose {user_action}")
+   # Ger respons på sten
+   elif user_action == "rock":
+      if computer_action == "scissor":
+         print("Rock beats scissor, you win!")
+      else:
+         print("Paper covers rock, you lose! ")
+
+   elif user_action == "paper":
+      if computer_action == "rock":
+         print("Paper cover rock you win!")
+
+      else:
+         print("Scissor cuts paper, You win!"'')
+
+   elif user_action == "scissor":
+      if computer_action == "rock":
+         print("Oh no, rock beats scissor")
+
+      else:
+         print("You won, scissor beats paper!")
+
+   play_again = input("\n Do you want to play again? (y/n)")
+   if play_again.lower() == "y":
+      continue
+   break
